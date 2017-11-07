@@ -1,0 +1,657 @@
+/*
+Theme Name: HackerYou Starter Theme
+Theme URI: http://hackeryou.com;
+Description: Starter theme for building any website. Created by HackerYou. Rename this to your own theme page.
+Version: 1.0
+Author: HackerYou
+Author URI: http://hackeryou.com
+*/
+
+
+/* =============================================================================
+                   Normalize, border box and clearfix
+   ========================================================================== */
+@import 'normalize';
+@import 'deadset/deadset';
+@import 'variables';
+
+img {
+  max-width:100%;
+  height: auto;
+}
+
+.row {
+  @include row();
+}
+
+/* Global Classes / Wordpress Specific */
+.aligncenter    { text-align: center; margin: 0 auto; }
+.alignleft      { float: left; }
+.alignright     { float: right; }
+img.alignleft     { padding-right: 5px;}
+img.alignright    { padding-left: 5px; }
+.clear        { width:100%; float:left; clear:both;}
+
+/* =============================================================================
+                   Default Styling
+   ========================================================================== */
+
+body {
+  color: $fontColour;
+}
+
+h1, h2, h3, h4, h5, ul, li, a {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin:0 auto;
+}
+
+.content {
+  float:left;
+  width:65%;
+  margin-right: 5%;
+
+}
+
+.full {
+  width:100%;
+}
+
+.innerWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* links */
+a {
+  color: $fontColour;
+  text-decoration: none;
+  font-family: $headerFont;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: $linkHover;
+}
+
+/* paragraphs */
+p {
+  line-height: 1.7;
+  font-family: $bodyFont;
+  letter-spacing: 0.8px;
+}
+
+/*blockquotes*/
+blockquote {
+  background: #F7F7F7;
+  margin:0;
+  padding:20px;
+}
+  blockquote p {
+    margin-top: 0;
+  }
+
+/*tables*/
+table td {
+  padding:10px;
+}
+table tr td:first {
+  padding-right: 0;
+}
+
+/*def lists*/
+dt {
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+dd {
+  padding:10px;
+  margin-left: 10px;
+}
+
+/*lists*/
+ul li,ol li {
+  padding:3px;
+}
+
+/*PRE*/
+
+pre {
+  background: #F7F7F7;
+  padding:10px;
+  border-radius: 4px;
+  border:1px solid #ccc;
+}
+
+//==============================================================================
+// Header Section
+//==============================================================================
+
+h1 {
+  font-size: 50px;
+}
+
+/* =============================================================================
+                   Sidebar
+   ========================================================================== */
+.sidebar {
+  width:30%;
+  float:left;
+}
+  .sidebar ul {
+    margin:0;
+    padding:0;
+  }
+    .sidebar ul li {
+      list-style: none;
+    }
+
+/* =============================================================================
+                   Footer
+   ========================================================================== */
+
+footer {
+  clear:both;
+}
+
+/* =============================================================================
+                   Navigation
+   ========================================================================== */
+  
+  .mainNav {
+    background: $backgroundColour;
+  }
+
+  ul.menu,ul.navHighlighter {
+    width: 100%;
+    margin:0;
+    padding:0;
+    background: #F3F3F1;
+    padding: 10px 0;
+    top: -100px;
+    transition: all 0.5s;  
+    text-align: right;
+
+  }
+
+    ul.menu li,ul.navHighlighter li {
+      display:inline;
+      margin-right: 10px;
+    }
+
+      ul.menu li a,ul.navHighligher li a {
+        color:#333;
+        display: inline-block;
+        padding:10px;
+        color: $fontColour;
+        font-family: $subHeadFont;
+        font-size: 12px;
+        &:hover, &.nav-active {
+          color: $linkHover;
+        }
+        &:focus {
+          color: $linkHover;
+          outline: 0;
+        }
+      }
+
+  body.scrolling {
+    padding-top: 64px;
+    .mainNav {
+      position: fixed;
+      top: 0;
+      background: $backgroundColour;
+      width: 100%;
+      z-index: 999;
+    }
+  }
+
+  a.mobileNavIcon {
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    background: $backgroundColour;
+    display: none;
+  }
+
+  ul.menu.open {
+    display: block;
+  }
+
+  .nav-active {
+    color: $linkHover;
+  }
+
+//==============================================================================
+// Home Page
+//==============================================================================
+
+.homePage {
+  section {
+    padding: 40px 0;
+    margin: 25px 0;
+  }
+}
+
+section.headerLogo {
+  text-align: center;
+  margin: 0; 
+  padding: 50px 0;
+  h2 {
+    text-transform: uppercase;
+    font-family: $headerFont;
+    font-weight: $headerFontWeight;
+    font-size: 50px;
+    letter-spacing: 3px;
+  }
+  h3 {
+    font-family: $subHeadFont;
+    font-weight: $subHeadFontWeight;
+    letter-spacing: 1px;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+}
+
+
+.animateLogo {
+  svg {
+    width: 155px;
+    height: 155px;
+  }
+}
+
+path, line, polyline {
+  stroke: $fontColour;
+  stroke-width: 1px;
+}
+
+path {
+  fill: transparent;
+}
+
+.heroImage {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+//==============================================================================
+// Portfolio Section
+//==============================================================================
+
+.portfolio {
+  @include column(12);
+}
+
+h3.headerLine {
+  text-align: center;
+  padding: 40px 0;
+  &::before {
+    content:'';
+    display: block;
+    height: 1px;
+    background: darken($backgroundColour, 10%);
+    width: 100%;
+  }
+}
+
+span.linethrough {
+  position: relative;
+  top: -10px;
+  font-family: $subHeadFont;
+  font-weight: $subHeadFontWeight;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: $linkHover;
+  padding: 10px 15px;
+  color: white;
+  font-size: 15px;
+}
+
+.technologies {
+  padding: 5px;
+  margin: 0;
+}
+
+.featuredPost {
+  width: 100%;
+  padding: 30px 0;
+  .portImage {
+    float: left;
+  }
+  .portfolioInfo {
+    float: right;
+  }
+  &:nth-child(odd) {
+    .portImage {
+      float: right;
+    }
+    .portfolioInfo {
+      float: left;
+    }
+  }
+}
+
+.portImage {
+  width: 40%;
+  margin-right: 2.5%;
+}
+
+.portfolioInfo {
+  width: 55%;
+  margin-left: 2.5%;
+}
+
+.portContent {
+  padding-top: 60px;
+  h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 14px;
+  }
+  h3 {
+    font-family: $subHeadFont;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 10px;
+  }
+  ul {
+    padding-bottom: 10px;
+    li:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.portContent li {
+  list-style-type: none;
+  font-family: $headerFont;
+  text-transform: uppercase;
+  padding: 3px;
+  margin: 2px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.viewOn {
+  margin: 10px 0;
+  a {
+    padding: 10px 10px 10px 0;
+    letter-spacing: 1px;
+    border: 1px solid $fontColour;
+    padding: 10px;
+    margin: 0 10px;
+    display: inline-block;
+    letter-spacing: 1px;
+    font-size: 14px;
+    &:hover {
+      border: 1px solid $linkHover;
+      color: $fontColour;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.thumbnails {
+  width: 100%;
+}
+
+//==============================================================================
+// About Section
+//==============================================================================
+
+.about {
+  @include column(12);  
+  .aboutImg {
+    @include column(4);
+    margin-top: 22px;
+  }
+  .aboutContent {
+    @include column(8);
+    p {
+      font-size: 15px;
+      text-align: left;
+    }
+    a {
+      padding: 10px 10px 10px 0;
+      letter-spacing: 1px;
+      border: 1px solid $fontColour;
+      padding: 10px;
+      margin: 0 10px;
+      margin-left: 0;
+      display: inline-block;
+      letter-spacing: 1px;
+      &:hover {
+        border: 1px solid $linkHover;
+        color: $fontColour;
+      }
+    }
+  }
+}
+
+.about .aboutContent a.resume {
+  margin-top: 30px;
+}
+
+//==============================================================================
+// Skills Section
+//==============================================================================
+
+.skills {
+  @include column(12);
+  text-align: center;
+  background: $backgroundColour;
+  h3 {
+    font-family: $headerFont;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+  ul {
+    li {
+      list-style-type: none;
+      padding: 10px 0;
+      font-size: 15px;
+      font-family: $bodyFont;
+    }
+  }
+}
+
+.skillsIHave {
+  @include column(4);
+}
+
+.skillsImLearning {
+  @include column(4);
+}
+
+.skillsIWant {
+  @include column(4);
+}
+
+
+/* =============================================================================
+                   Comment Styling
+   ========================================================================== */
+
+//==============================================================================
+//Contact Section
+//==============================================================================
+
+.contact {
+  clear: both;
+}
+
+.contactInfo {
+  @include column(6);
+  padding-top: 40px;
+  margin: 25px 0;
+  h3 {
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 1px;
+
+  }
+  p {
+    margin: 0;
+    font-size: 15px;
+    padding: 15px 0;
+  }
+  .or {
+    font-family: $headerFont;
+    display: inline-block;
+    padding: 10px 14px;
+    text-transform: lowercase;
+    margin: 5px 0;
+  }
+}
+
+h3.social {
+  padding-top:15px;
+}
+
+ul.socialMediaLinks {
+  padding: 15px 0;
+  li {
+    font-size: 20px;
+    list-style-type: none;
+    a {
+      font-size: 15px;
+      padding: 15px 0 10px 10px;
+      text-transform: lowercase;
+      font-family: $bodyFont;
+      letter-spacing: 0.8px;
+      line-height: 1.5;
+    }
+  }
+}
+
+i.fa {
+  font-size: 22px;
+}
+
+.contactForm {
+  @include column(6);
+  margin: 25px 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+@mixin form {
+  width: 100%;
+  border:none;
+  padding: 10px 10px;
+  font-family: $bodyFont;
+  background: transparent;
+  z-index: 999;
+  &:focus {
+    border:1px solid $linkHover;
+    outline: none;
+
+  }
+}
+
+input {
+  font-size: 14px;
+}
+
+form {
+  input[type="text"], input[type="email"] {
+    @include form;
+    position: relative;
+    border-bottom: 1px solid $fontColour;
+  }
+  textarea[name="your-message"] {
+    @include form;
+    border: 1px solid $fontColour;
+    font-size: 14px;
+    position: relative;
+  }
+  input[type="submit"] {
+    @include form;
+    font-family: $headerFont;
+    background: $linkHover;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    &:hover {
+      background: lighten($linkHover, 5%);
+    }
+  }
+}
+
+form p {
+  margin: 0;
+}
+
+@mixin label {
+  display: inline-block;
+  width: 146px;
+  transition: all 0.5s;
+  left: 10px;
+  font-family: $headerFont;
+  text-transform: uppercase;
+}
+
+span.sexyInput {
+  position: relative;
+}
+
+form span.label1 {
+  @include label;
+}
+
+span.label2 {
+  @include label;
+}
+
+span.label3 {
+  @include label;
+  width: 225px;
+}
+
+span.label4 {
+  @include label;
+  width: 152px;
+}
+
+form span.labelStart {
+  top:30px;
+  position: absolute;
+}
+
+span.labelSlide {
+  top: -6px;
+  position: absolute;
+}
+
+//==============================================================================
+//Footer Section
+//==============================================================================
+
+footer {
+  background: $backgroundColour;
+  text-align: center;
+  padding: 6px;
+  p {
+  font-family: $headerFont;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  }
+}
+
+@import 'portfoliosingle';
+@import 'blog';
+@import 'commentStyles';
+@import 'mq';

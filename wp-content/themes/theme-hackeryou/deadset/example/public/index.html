@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+	<div class="container">
+
+		<h1>Deadset</h1>
+		<p>In your CSS, define the amount of columns that you want an element to span. Put each section of content within an element and call the "row" mixin on it. Class names are arbitrary and used only for examples. The mixins are the magic.</p>
+		<p>All credit to <a href="https://github.com/tylertate/semantic.gs/">https://github.com/tylertate/semantic.gs/</a>. I just tweaked it a bit.</p>
+
+		<div class="content">
+			<div class="row">
+				<div class="one column">One</div>
+				<div class="one column">One</div>
+				<div class="one column">One</div>
+				<div class="one column">One</div>
+				<div class="one column">One</div>
+				<div class="one column">One</div>
+				<div class="one column">One</div>
+				<div class="one column">One</div>
+				<div class="one column">One</div>
+				<div class="one column">One</div>
+				<div class="one column">One</div>
+				<div class="one column">One</div>
+			</div>
+			<code>
+				<pre>
+.one {
+	@include column(1);
+}
+				</pre>
+			</code>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="two column">Two</div>
+				<div class="two column">Two</div>
+				<div class="two column">Two</div>
+				<div class="two column">Two</div>
+				<div class="two column">Two</div>
+				<div class="two column">Two</div>
+			</div>
+			<code>
+				<pre>
+.two {
+	@include column(2);
+}
+				</pre>
+			</code>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="three column">Three</div>
+				<div class="three column">Three</div>
+				<div class="three column">Three</div>
+				<div class="three column">Three</div>
+			</div>
+			<code>
+				<pre>
+.three {
+	@include column(3);
+}
+				</pre>
+			</code>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="four column">Four</div>
+				<div class="four column">Four</div>
+				<div class="four column">Four</div>
+			</div>
+			<code>
+				<pre>
+.four {
+	@include column(4);
+}
+				</pre>
+			</code>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="five column">Five</div>
+				<div class="two column">Two</div>
+				<div class="five column">Five</div>
+			</div>
+			<code>
+				<pre>
+.five {
+	@include column(5);
+}
+.two {
+	@include column(2);
+}
+				</pre>
+			</code>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="six column">Six</div>
+				<div class="six column">Six</div>
+			</div>
+			<code>
+				<pre>
+.six {
+	@include column(6);
+}
+				</pre>
+			</code>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="eight column">Eight</div>
+				<div class="four column">Four</div>
+			</div>
+			<code>
+				<pre>
+.eight {
+	@include column(8);
+}
+.four {
+	@include column(4);
+}
+				</pre>
+			</code>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="nine column">Nine</div>
+				<div class="three column">Three</div>
+			</div>
+			<code>
+				<pre>
+.nine {
+	@include column(9);
+}
+.three {
+	@include column(3);
+}
+				</pre>
+			</code>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="ten column">Ten</div>
+				<div class="two column">Two</div>
+			</div>
+			<code>
+				<pre>
+.ten {
+	@include column(10);
+}
+.two {
+	@include column(2);
+}
+				</pre>
+			</code>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="eleven column">Eleven</div>
+				<div class="one column">One</div>
+			</div>
+			<code>
+				<pre>
+.eleven {
+	@include column(11);
+}
+.one {
+	@include column(1);
+}
+				</pre>
+			</code>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="twelve column">Twelve</div>
+			</div>
+			<code>
+				<pre>
+.twelve {
+	@include column(12);
+}
+				</pre>
+			</code>
+		</div>
+		<h2>Using Pushes and Pulls to define empty space within a row</h2>
+		<div class="content">
+			<div class="row">
+				<div class="nine column push">Nine with Push of 3</div>
+			</div>
+			<code>
+				<pre>
+.nine {
+	@include column(12);
+}
+.push {
+	@include push(3);
+}
+				</pre>
+			</code>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="five column push pull">Five with push of 3 and pull of 2</div>
+				<div class="two column">Two</div>
+			</div>
+			<code>
+				<pre>
+.five {
+	@include column(5);
+}
+.push {
+	@include push(3);
+}
+.pull {
+	@include pull(2);
+}
+				</pre>
+			</code>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="fourpull column">Four Column</div>
+				<div class="two column">Two</div>
+				<div class="four column">Four</div>
+			</div>
+			<code>
+				<pre>
+.fourpull {
+	@include column(4);
+	@include pull(2);
+}
+
+.two {
+	@include column(2);
+}
+
+.four {
+	@include column(4);
+}
+				</pre>
+			</code>
+		</div>
+	</div>
+	
+</body>
+</html>

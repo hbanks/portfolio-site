@@ -1,0 +1,102 @@
+@media (max-width: 1045px) {
+	.portImage {
+	  width: 37%;
+	}
+
+	.portfolioInfo {
+	  width: 53%;
+	}
+
+	.homePage section {
+		padding: 40px 15px;
+	}
+}
+
+@media (max-width: 960px) {
+	.portContent {
+		padding-top: 40px;
+	}
+}
+
+@media (max-width: 800px) {
+	ul.menu {
+		text-align: center;
+	}
+
+	.featuredPost {
+		padding: 15px 0;
+	}
+
+	.portImage {
+		width: 100%;
+		margin: 0;
+	}
+	.portfolioInfo {
+		width: 100%;
+		margin: 0;
+		padding: 0 30px;
+	}
+
+	.about .aboutImg {
+		width: 100%;
+		text-align: center;
+	}
+
+	.about .aboutContent {
+		width: 100%;
+	}
+}
+
+@media (max-width: 630px) {
+	.contactInfo {
+		width: 100%;
+		text-align: center;
+	}
+	.contactForm {
+		width: 100%;
+	}
+}
+
+@media (max-width: 555px) {
+	@mixin skills {
+		width: 100%;
+		padding: 10px 0;
+	}
+
+	.skillsIHave {
+		@include skills;
+
+	}
+	.skillsImLearning {
+		@include skills;
+	}
+	.skillsIWant {
+		@include skills;
+	}
+}
+
+@media (max-width: 520px) {
+	a.mobileNavIcon {
+		display: block;
+	}
+
+	ul.menu {
+		display: none;
+		li {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 512px) {
+	ul.menu li a {
+		padding: 10px 20px;
+	}
+}
+
+@media (max-width: 360px) {
+	ul.menu li a {
+		padding: 10px 10px;
+	}
+}

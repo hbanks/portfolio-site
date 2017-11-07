@@ -1,0 +1,135 @@
+@import 'variables';
+
+.row {
+	@include row();
+}
+
+//==========================================================
+// Blog Page
+//==========================================================
+
+.blogContainer {
+	max-width: 1000px;
+}
+
+.blogContent {
+	.post {
+		padding: 0 10px 25px 0;
+		h2.entry-title {
+			padding: 0;
+			font-size: 30px;
+		}
+		footer {
+			background: none;
+			text-align: left;
+			padding: 0;
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+//==========================================================
+// Single Post Styles
+//==========================================================
+.singleContainer {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.postDate {
+	font-family: $subHeadFont;
+	font-size: 15px;
+	margin: 0;
+}
+
+.content,.singleContent {
+	@include column(9);
+	margin: 0;
+	margin-top: 50px;
+	h2 {
+		font-size: 36px;
+		padding: 15px 0;
+	}
+}
+
+.sidebar {
+	@include column(3);
+	margin-top: 50px;
+}
+
+ul.xoxo {
+	text-transform: capitalize;
+	li.widget-container {
+		padding: 10px 0;
+		h3 {
+			text-transform: uppercase;
+			padding: 5px 0;
+		}
+		a {
+			text-transform: capitalize;
+			font-family: $subHeadFont;
+			padding: 5px 0;
+		}
+	}
+}
+
+form[role="search"] {
+	input[type="search"] {
+		padding: 8px;
+		display: inline-block;
+		width: 55%;
+		font-family: $bodyFont;
+		font-size: 12px;
+	}
+	input[type="submit"] {
+		width: auto;
+		font-size: 12px;
+	}
+}
+
+.singleContent h3#reply-title {
+	text-transform: uppercase;
+	color: $fontColour;
+}
+.singleContent #respond .form-submit input {
+	margin-top: 15px;
+}
+
+ol.comment-list {
+	padding-left: 0;
+	li.comment {
+		list-style-type: none;
+		footer.comment-meta {
+			text-align: left;
+		}
+	}
+}
+
+//==========================================================
+//Blog Archive/Category Pages
+//==========================================================
+
+.archiveContainer,.categoryContainer {
+	max-width: 1000px;
+}
+
+.archiveContent,.categoryContainer {
+	.post {
+		padding: 15px 0;
+		padding-right: 10px;
+		h2.entry-title {
+			padding: 0;
+			font-size: 30px;
+		}
+		footer {
+			background: none;
+			text-align: left;
+			padding: 0;
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
