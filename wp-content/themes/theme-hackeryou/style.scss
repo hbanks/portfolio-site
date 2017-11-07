@@ -12,7 +12,7 @@ Author URI: http://hackeryou.com
                    Normalize, border box and clearfix
    ========================================================================== */
 @import 'normalize';
-@import 'deadset/deadset';
+@import 'deadset/deadset.scss';
 @import 'variables';
 
 img {
@@ -205,7 +205,7 @@ footer {
       top: 0;
       background: $backgroundColour;
       width: 100%;
-      z-index: 999;
+      z-index: 99999;
     }
   }
 

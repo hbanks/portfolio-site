@@ -94,7 +94,8 @@ button, input, select, textarea {
 button, input {
   line-height: normal; }
 
-button, html input[type=button], input[type=reset], input[type=submit] {
+button, html input[type=button],
+input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer; }
 
@@ -215,7 +216,7 @@ h1, h2, h3, h4, h5, ul, li, a {
 a {
   color: #47443C;
   text-decoration: none;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase; }
 
 a:hover {
@@ -224,7 +225,7 @@ a:hover {
 /* paragraphs */
 p {
   line-height: 1.7;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   letter-spacing: 0.8px; }
 
 /*blockquotes*/
@@ -312,7 +313,7 @@ ul.menu li a, ul.navHighligher li a {
   display: inline-block;
   padding: 10px;
   color: #47443C;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 12px; }
   ul.menu li a:hover, ul.menu li a.nav-active, ul.navHighligher li a:hover, ul.navHighligher li a.nav-active {
     color: #DE845A; }
@@ -327,7 +328,7 @@ body.scrolling {
     top: 0;
     background: #F3F3F1;
     width: 100%;
-    z-index: 999; }
+    z-index: 99999; }
 
 a.mobileNavIcon {
   padding: 10px;
@@ -352,12 +353,12 @@ section.headerLogo {
   padding: 50px 0; }
   section.headerLogo h2 {
     text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     font-weight: 700;
     font-size: 50px;
     letter-spacing: 3px; }
   section.headerLogo h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
     font-size: 30px;
@@ -399,7 +400,7 @@ h3.headerLine {
 span.linethrough {
   position: relative;
   top: -10px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -440,7 +441,7 @@ span.linethrough {
   .portContent p {
     font-size: 14px; }
   .portContent h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-transform: uppercase;
     font-size: 14px;
     padding-top: 10px; }
@@ -451,7 +452,7 @@ span.linethrough {
 
 .portContent li {
   list-style-type: none;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   padding: 3px;
   margin: 2px;
@@ -525,7 +526,7 @@ span.linethrough {
   text-align: center;
   background: #F3F3F1; }
   .skills h3 {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-size: 22px; }
@@ -533,7 +534,7 @@ span.linethrough {
     list-style-type: none;
     padding: 10px 0;
     font-size: 15px;
-    font-family: 'Lato', sans-serif; }
+    font-family: "Lato", sans-serif; }
 
 .skillsIHave {
   display: inline-block;
@@ -579,7 +580,7 @@ span.linethrough {
     font-size: 15px;
     padding: 15px 0; }
   .contactInfo .or {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     display: inline-block;
     padding: 10px 14px;
     text-transform: lowercase;
@@ -597,7 +598,7 @@ ul.socialMediaLinks {
       font-size: 15px;
       padding: 15px 0 10px 10px;
       text-transform: lowercase;
-      font-family: 'Lato', sans-serif;
+      font-family: "Lato", sans-serif;
       letter-spacing: 0.8px;
       line-height: 1.5; }
 
@@ -621,7 +622,7 @@ form input[type="text"], form input[type="email"] {
   width: 100%;
   border: none;
   padding: 10px 10px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   background: transparent;
   z-index: 999;
   position: relative;
@@ -629,11 +630,12 @@ form input[type="text"], form input[type="email"] {
   form input[type="text"]:focus, form input[type="email"]:focus {
     border: 1px solid #DE845A;
     outline: none; }
+
 form textarea[name="your-message"] {
   width: 100%;
   border: none;
   padding: 10px 10px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   background: transparent;
   z-index: 999;
   border: 1px solid #47443C;
@@ -642,14 +644,15 @@ form textarea[name="your-message"] {
   form textarea[name="your-message"]:focus {
     border: 1px solid #DE845A;
     outline: none; }
+
 form input[type="submit"] {
   width: 100%;
   border: none;
   padding: 10px 10px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   background: transparent;
   z-index: 999;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   background: #DE845A;
   color: white;
   text-transform: uppercase;
@@ -672,7 +675,7 @@ form span.label1 {
   -webkit-transition: all 0.5s;
           transition: all 0.5s;
   left: 10px;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase; }
 
 span.label2 {
@@ -681,7 +684,7 @@ span.label2 {
   -webkit-transition: all 0.5s;
           transition: all 0.5s;
   left: 10px;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase; }
 
 span.label3 {
@@ -690,7 +693,7 @@ span.label3 {
   -webkit-transition: all 0.5s;
           transition: all 0.5s;
   left: 10px;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   width: 225px; }
 
@@ -700,7 +703,7 @@ span.label4 {
   -webkit-transition: all 0.5s;
           transition: all 0.5s;
   left: 10px;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   width: 152px; }
 
@@ -717,7 +720,7 @@ footer {
   text-align: center;
   padding: 6px; }
   footer p {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px; }
 
@@ -763,7 +766,7 @@ footer {
   display: inline; }
   .technologies.singleTechnologies ul li {
     display: inline-block;
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     text-transform: uppercase; }
 
 .viewAt {
@@ -812,7 +815,7 @@ footer {
   .portContent p {
     font-size: 14px; }
   .portContent h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     text-transform: uppercase;
     font-size: 14px;
     padding-top: 10px; }
@@ -822,7 +825,7 @@ footer {
 .portContent li {
   list-style-type: none;
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   padding: 3px;
   margin: 2px;
@@ -878,7 +881,7 @@ footer {
   margin: 0 auto; }
 
 .postDate {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 15px;
   margin: 0; }
 
@@ -911,15 +914,16 @@ ul.xoxo {
       padding: 5px 0; }
     ul.xoxo li.widget-container a {
       text-transform: capitalize;
-      font-family: 'Lato', sans-serif;
+      font-family: "Lato", sans-serif;
       padding: 5px 0; }
 
 form[role="search"] input[type="search"] {
   padding: 8px;
   display: inline-block;
   width: 55%;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 12px; }
+
 form[role="search"] input[type="submit"] {
   width: auto;
   font-size: 12px; }
